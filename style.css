@@ -1578,6 +1578,324 @@ PROGRESS BARS
     margin-top: 50px;
 }
 
+/* SECTION */
+.launch-section {
+    padding: 100px 20px;
+    background: #ffffff;
+    max-width: 1300px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* TOP ROW */
+.launch-top {
+    display: flex;
+    gap: 100px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.launch-heading {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 700;
+    font-size: 55px;
+    color: #1C1C1C;
+    line-height: 1.2;
+    flex: 1;
+    min-width: 300px;
+}
+
+.launch-description {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #333333;
+    line-height: 1.6;
+    flex: 1;
+    min-width: 300px;
+    align-self: center;
+}
+
+/* BOTTOM ROW */
+.launch-bottom {
+    display: flex;
+    gap: 22px;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+/* IMAGE */
+.launch-image img {
+    width: 500px;
+    height: 644px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}
+
+/* FORM WRAPPER */
+.launch-form-wrapper {
+    background: #F2F6FF;
+    border-radius: 20px;
+    padding: 20px;
+    flex: 1;
+    min-width: 350px;
+}
+
+/* FORM */
+.launch-form {
+    width: 100%;
+}
+
+/* GRID */
+.form-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 calc(50% - 10px);
+}
+
+.full-width {
+    flex: 1 1 100%;
+    margin-top: 20px;
+}
+
+/* LABELS */
+.form-group label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #1C1C1C;
+    margin-bottom: 8px;
+}
+
+/* INPUTS */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #333333;
+    background-color: #1414140D;
+    padding: 14px 16px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+/* PLACEHOLDER */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #33333380;
+    font-weight: 500;
+}
+
+/* TEXTAREA */
+textarea {
+    resize: none;
+    height: 120px;
+}
+
+/* BUTTON (Same Enquiry Style with Gradient + Slight Glow) */
+.send-btn {
+    margin-top: 30px;
+    width: 100%;
+    padding: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background: linear-gradient(to bottom left,
+            #0091DF,
+            #003679);
+    transition: all 0.4s ease;
+}
+
+.send-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 87, 255, 0.3);
+}
+
+/* ==============================
+FOOTER SECTION (inside container)
+============================== */
+
+.mahana-footer {
+    padding: 0 40px 0px 40px;
+    /* outer spacing */
+    font-family: 'Inter', sans-serif;
+}
+
+/* Rounded dark card */
+.mahana-footer .footer-container {
+    position: relative;
+    max-width: 1300px;
+    margin: 0 auto;
+    background: url('./images/Group\ 1\ \(5\).png') no-repeat center/cover;
+    border-radius: 30px;
+    padding: 134px 60px 85px 60px;
+    overflow: hidden;
+}
+
+/* ==============================
+WATERMARK
+============================== */
+
+.footer-watermark {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.footer-watermark img {
+    width: 100%;
+    opacity: 0.15;
+    mix-blend-mode: lighten;
+}
+
+
+/* ==============================
+TOP ROW
+============================== */
+
+.footer-top {
+    display: flex;
+    justify-content: flex-end;
+    /* menu on right */
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+/* Logo */
+.footer-logo {
+    position: absolute;
+    top: 11px;
+    left: 7px;
+    /* match container padding */
+}
+
+.footer-logo img {
+    height: 55px;
+}
+
+/* Menu */
+.footer-menu {
+    display: flex;
+    gap: 35px;
+    position: absolute;
+    top: 45px;
+}
+
+.footer-menu a {
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+/* Hover underline */
+.footer-menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 1px;
+    background: #FFFFFF;
+    transition: width 0.3s ease;
+}
+
+.footer-menu a:hover::after {
+    width: 100%;
+}
+
+/* ==============================
+DIVIDER
+============================== */
+
+.footer-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.3);
+    position: relative;
+    top: -64px;
+    margin-bottom: 20px;
+    animation: pulseLine 2s infinite ease-in-out;
+}
+
+@keyframes pulseLine {
+    0% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.4;
+    }
+}
+
+/* ==============================
+BOTTOM ROW
+============================== */
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: -61px;
+}
+
+/* Copyright */
+.footer-copy {
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+/* Social */
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+.social-icon img {
+    width: 18px;
+}
+
+.social-icon:hover {
+    transform: scale(1.15);
+}
+
+
 /* RESPONSIVE */
 
 @media (max-width: 1200px) {
@@ -1629,6 +1947,19 @@ PROGRESS BARS
     .icon {
         width: 75px;
     }
+
+    .mahana-footer .footer-container {
+        padding: 120px 40px 70px 40px;
+    }
+
+    .footer-menu {
+        right: 40px;
+        gap: 25px;
+    }
+
+    .footer-logo img {
+        height: 38px;
+    }
 }
 
 @media(max-width: 1024px) {
@@ -1679,6 +2010,29 @@ PROGRESS BARS
 
     .icon {
         width: 75px;
+    }
+
+    .mahana-footer .footer-container {
+        padding: 110px 35px 65px 35px;
+    }
+
+    .footer-menu {
+        top: 40px;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .footer-divider {
+        top: -50px;
+    }
+
+    .footer-bottom {
+        top: -45px;
+    }
+
+    .footer-logo img {
+        height: 34px;
     }
 
 }
@@ -1908,6 +2262,65 @@ PROGRESS BARS
         width: 150px;
     }
 
+    .faq-heading {
+        font-size: 30px;
+    }
+
+    .launch-top {
+        gap: 40px;
+    }
+
+    .launch-bottom {
+        flex-direction: column;
+    }
+
+    .launch-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .launch-heading {
+        font-size: 40px;
+    }
+
+    .launch-description {
+        font-size: 18px;
+    }
+
+    .mahana-footer .footer-container {
+        padding: 90px 30px 60px 30px;
+    }
+
+    .footer-logo {
+        position: static;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-menu {
+        position: static;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
+        margin-bottom: 25px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-divider {
+        position: static;
+        margin: 25px 0;
+    }
+
+    .footer-bottom {
+        position: static;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
 
 }
 
@@ -2190,6 +2603,66 @@ PROGRESS BARS
     .trusted-logos img {
         width: 130px;
         max-height: 40px;
+    }
+
+    .faq-heading {
+        font-size: 24px;
+    }
+
+    .faq-question {
+        font-size: 18px;
+    }
+
+    .faq-answer {
+        font-size: 15px;
+    }
+
+    .launch-section {
+        padding: 60px 15px;
+    }
+
+    .launch-form-wrapper {
+        padding: 25px;
+    }
+
+    .form-group {
+        flex: 1 1 100%;
+    }
+
+    .launch-heading {
+        font-size: 32px;
+    }
+
+    .mahana-footer {
+        padding: 0 15px;
+    }
+
+    .mahana-footer .footer-container {
+        padding: 70px 20px 50px 20px;
+        border-radius: 20px;
+    }
+
+    .footer-menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .footer-menu a {
+        font-size: 14px;
+    }
+
+    .footer-copy {
+        font-size: 14px;
+    }
+
+    .social-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .social-icon img {
+        width: 16px;
     }
 
 }
