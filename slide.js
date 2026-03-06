@@ -53,3 +53,70 @@ function nextSlide() {
 
 showSlide(current);
 setInterval(nextSlide, duration);
+
+/* =========================
+DRAG / SWIPE SLIDER
+========================= */
+
+const slider = document.querySelector(".results-slider");
+
+let startX = 0;
+let isDragging = false;
+
+slider.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    startX = e.clientX;
+});
+
+slider.addEventListener("mouseup", (e) => {
+    if (!isDragging) return;
+    let diff = e.clientX - startX;
+
+    if (diff > 80) {
+        // swipe right
+        current--;
+        if (current < 0) current = slides.length - 1;
+        showSlide(current);
+    }
+
+    if (diff < -80) {
+        // swipe left
+        current++;
+        if (current >= slides.length) current = 0;
+        showSlide(current);
+    }
+
+    isDragging = false;
+});
+
+slider.addEventListener("mouseleave", () => {
+    isDragging = false;
+});
+
+
+/* =========================
+TOUCH SUPPORT (MOBILE)
+========================= */
+
+slider.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+});
+
+slider.addEventListener("touchend", (e) => {
+
+    let endX = e.changedTouches[0].clientX;
+    let diff = endX - startX;
+
+    if (diff > 80) {
+        current--;
+        if (current < 0) current = slides.length - 1;
+        showSlide(current);
+    }
+
+    if (diff < -80) {
+        current++;
+        if (current >= slides.length) current = 0;
+        showSlide(current);
+    }
+
+});

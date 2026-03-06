@@ -3,7 +3,7 @@
 body {
     background: #ffffff;
     margin: 0;
-    font-family: 'Inter', sans-serif;
+    /* font-family: 'Inter', sans-serif; */
     overflow-x: hidden;
 }
 
@@ -264,9 +264,9 @@ BANNER
 
 .banner-content h1 {
 
-    font-family: 'IBM Plex Sans';
+    font-family: 'IBM Plex Sans', sans-serif;
 
-    font-size: 65px;
+    font-size: 60px;
 
     font-weight: 700;
 
@@ -403,7 +403,7 @@ BANNER
 
 .counter-number {
 
-    font-family: 'IBM Plex Sans';
+    font-family: 'IBM Plex Sans', sans-serif;
 
     font-weight: 700;
 
@@ -452,7 +452,7 @@ CHALLENGE SECTION
 
     text-align: center;
 
-    font-family: 'IBM Plex Sans';
+    font-family: 'IBM Plex Sans', sans-serif;
 
     font-weight: 700;
 
@@ -599,11 +599,11 @@ CHALLENGE SECTION
 
 .card-inner h4 {
 
-    font-family: 'IBM Plex Sans';
+    font-family: 'IBM Plex Sans', sans-serif;
 
     font-weight: 700;
 
-    font-size: 21px;
+    font-size: 20px;
 
     color: #1C1C1C;
 
@@ -619,7 +619,7 @@ CHALLENGE SECTION
 
     text-align: center;
 
-    font-family: 'IBM Plex Sans';
+    font-family: 'IBM Plex Sans', sans-serif;
 
     font-weight: 600;
 
@@ -677,7 +677,7 @@ MULTI CHANNEL SECTION
 
 .multi-heading {
 
-    font-family: 'IBM Plex Sans';
+    font-family: 'IBM Plex Sans', sans-serif;
 
     font-weight: 700;
 
@@ -783,7 +783,7 @@ MULTI CHANNEL SECTION
 
 .multi-card h3 {
 
-    font-family: 'IBM Plex Sans';
+    font-family: 'IBM Plex Sans', sans-serif;
 
     font-weight: 700;
 
@@ -854,7 +854,7 @@ SECTION BASE
 
 .results-heading {
     text-align: center;
-    font-family: 'IBM Plex Sans';
+    font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 700;
     font-size: 45px;
     color: #1C1C1C;
@@ -910,7 +910,7 @@ SECTION BASE
 }
 
 .slide-content h3 {
-    font-family: 'IBM Plex Sans';
+    font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 700;
     font-size: 25px;
     color: #FFFFFF;
@@ -1000,6 +1000,14 @@ SECTION BASE
     height: 400px;
     object-fit: cover;
     border-radius: 20px;
+}
+
+.results-slider {
+    cursor: grab;
+}
+
+.results-slider:active {
+    cursor: grabbing;
 }
 
 
@@ -1169,7 +1177,7 @@ PROGRESS BARS
 }
 
 .feature h3 {
-    font-family: 'IBM Plex Sans';
+    font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 600;
     font-size: 20px;
     color: #1C1C1C;
@@ -1834,20 +1842,24 @@ DIVIDER
     position: relative;
     top: -64px;
     margin-bottom: 20px;
+    transform-origin: center;
     animation: pulseLine 2s infinite ease-in-out;
 }
 
 @keyframes pulseLine {
     0% {
         opacity: 0.4;
+        transform: scaleX(0.9);
     }
 
     50% {
         opacity: 1;
+        transform: scaleX(1.1);
     }
 
     100% {
         opacity: 0.4;
+        transform: scaleX(0.9);
     }
 }
 
@@ -1897,6 +1909,12 @@ BOTTOM ROW
 
 
 /* RESPONSIVE */
+
+@media (max-width: 1280px) {
+    .footer-logo img {
+        height: 47px;
+    }
+}
 
 @media (max-width: 1200px) {
     .counter-box {
@@ -2325,6 +2343,71 @@ BOTTOM ROW
 }
 
 
+@media (min-width: 700px) and (max-width: 760px) {
+    .top-left {
+        top: -13px;
+        left: -15px;
+        text-align: right;
+    }
+
+    .top-right {
+        top: -12px;
+        right: -21px;
+        text-align: left;
+    }
+
+    .bottom-left {
+        bottom: 1px;
+        left: -8px;
+        text-align: right;
+    }
+
+    .bottom-right {
+        bottom: -26px;
+        right: -13px;
+        text-align: left;
+    }
+
+}
+
+@media (min-width: 600px) and (max-width: 700px) {
+    .counter-box {
+        position: absolute;
+        right: 143px;
+        bottom: 42px;
+        display: flex;
+        /* flex-direction: column; */
+        gap: 12px;
+        align-items: flex-start;
+        max-width: 171px;
+    }
+
+    .top-left {
+        top: -5px;
+        left: -15px;
+        text-align: right;
+    }
+
+    .top-right {
+        top: -4px;
+        right: -21px;
+        text-align: left;
+    }
+
+    .bottom-left {
+        bottom: 7px;
+        left: -8px;
+        text-align: right;
+    }
+
+    .bottom-right {
+        bottom: -18px;
+        right: -13px;
+        text-align: left;
+    }
+}
+
+
 @media(max-width:576px) {
 
     .main-container {
@@ -2673,6 +2756,10 @@ BOTTOM ROW
         transform: translate(-64%, -6%);
         margin-bottom: 40px;
     }
+
+    .launch-section {
+        padding: 60px 5px;
+    }
 }
 
 @media (max-width: 320px) {
@@ -2680,5 +2767,23 @@ BOTTOM ROW
         position: relative;
         transform: translate(-54%, -6%);
         margin-bottom: 40px;
+    }
+
+    .launch-section {
+        padding: 60px 5px;
+    }
+
+    .counter-box {
+        right: -6px;
+        bottom: -81px;
+        
+    }
+
+    .banner-box {
+        min-height: 808px;
+    }
+
+    .launch-image img {
+        width: 86%;
     }
 }
